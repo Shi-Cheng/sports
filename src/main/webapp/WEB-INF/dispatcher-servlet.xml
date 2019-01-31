@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!--http://www.springframework.org/schema/mvc/spring-mvc.xsd-->
+    <!--启用spring的一些annotation -->
+    <context:annotation-config/>
+
+    <!-- 载入静态资源文件 -->
+
+    <!--<mvc:resources location="/resources/" mapping="/resources/**" />-->
+    <!--<mvc:resources location="/resources/css/" mapping="/css/**" />-->
+    <!--<mvc:resources location="/resources/font/" mapping="/font/**" />-->
+    <!--<mvc:resources location="/resources/images/" mapping="/images/**" />-->
+    <!--<mvc:default-servlet-handler/>-->
+
+    <mvc:annotation-driven/>
+
+    <!--&lt;!&ndash;解决中文乱码的问题&ndash;&gt;-->
+    <!--<bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">-->
+        <!--<property name="templateLoaderPath" value="/WEB-INF/html/" />-->
+        <!--<property name="freemarkerSettings">-->
+            <!--<props>-->
+                <!--<prop key="template_update_delay">1</prop>-->
+                <!--<prop key="default_encoding">UTF-8</prop>-->
+                <!--&lt;!&ndash;  <prop key="output_encoding">UTF-8</prop> &ndash;&gt;&lt;!&ndash;  输出的字符集  &ndash;&gt;-->
+                <!--<prop key="locale">zh_CN</prop>-->
+                <!--<prop key="number_format">0.##</prop>-->
+                <!--<prop key="datetime_format">yyyy-MM-dd HH:mm:ss</prop>-->
+            <!--</props>-->
+        <!--</property>-->
+        <!--<property name="freemarkerVariables">-->
+            <!--<map>-->
+            <!--</map>-->
+        <!--</property>-->
+    <!--</bean>-->
+    <!--<bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">-->
+        <!--<property name="viewClass" value="org.springframework.web.servlet.view.freemarker.FreeMarkerView"/>-->
+        <!--&lt;!&ndash; <property name="viewNames" value="*.ftl"/> &ndash;&gt;-->
+        <!--<property name="contentType" value="text/html; charset=utf-8"/>-->
+        <!--<property name="cache" value="true" />-->
+        <!--<property name="prefix" value="" />-->
+        <!--<property name="suffix" value=".ftl" />-->
+        <!--<property name="order" value="2"/>-->
+    <!--</bean>-->
+    <!-- html视图解析器 必须先配置freemarkerConfig,注意html是没有prefix前缀属性的-->
+    <!--<bean id="htmlviewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">-->
+        <!--<property name="suffix" value=".html" />-->
+        <!--<property name="order" value="0"></property>-->
+        <!--<property name="contentType" value="text/html;charset=UTF-8"></property>-->
+    <!--</bean>-->
+
+    <!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+        <!--<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>-->
+        <!--&lt;!&ndash;<property name="prefix" value="/WEB-INF/jsp/"/>&ndash;&gt;-->
+        <!--<property name="prefix" value="/WEB-INF/"/>-->
+        <!--<property name="suffix" value=".jsp"/>-->
+    <!--</bean>-->
+    <!--<mvc:resources location="/resources/css/" mapping="/css/**"/>-->
+    <!--<mvc:resources location="/resources/images/" mapping="/images/**"/>-->
+    <!--<mvc:resources location="/resources/font/" mapping="/font/**"/>-->
+    <!-- 自动扫描装配 -->
+    <context:component-scan base-package="sports.controller"/>
+
+</beans>

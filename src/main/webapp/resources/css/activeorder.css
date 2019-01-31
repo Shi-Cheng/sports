@@ -1,0 +1,54 @@
+body {
+    font: normal 100% Helvetica, Arial, sans-serif;
+}
+.active-img{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.active-img img {
+    -moz-background-size: contain;
+    -webkit-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+.active-img .horizon{
+    width: 80%;
+    height: 1px;
+    background-color: #e5e5e5;
+    vertical-align: middle;
+    position: relative;
+    margin: 0 auto;
+    z-index: -99;
+}
+.active-img .active-title {
+    margin-top: 5px;
+}
+
+.active-img .la2 {
+    font-size: 1em;
+    color: #8c8c8c;
+}
+
+.active-img .la3 {
+    font-size: 1em;
+    color: #8c8c8c;
+}
+
+.active-content {
+    text-indent: 2em;
+}
+
+.order-btn {
+    float: bottom;
+    bottom: 5%;
+    margin: 10px 5px 5px 5px;
+    z-index: -99;
+}
+
+
+
+
+

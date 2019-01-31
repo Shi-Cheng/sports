@@ -1,0 +1,52 @@
+html {
+
+}
+@media only screen and (min-width: 481px){
+    html {
+        font-size: 94%!important; /* 15.04÷16=94% */
+    }
+}
+@media only screen and (min-width: 561px){
+    html {
+        font-size: 109%!important; /* 17.44÷16=109% */
+    }
+}
+@media only screen and (min-width: 641px) {
+    html {
+        font-size: 125% !important; /* 20÷16=125% */
+    }
+}
+body {
+    font: normal 100% Helvetica, Arial, sans-serif;
+    font-size: 1.4rem;
+    /*background: url("/resources/images/bg1.png") no-repeat;*/
+    height: auto;
+    width: 100%;
+    background-attachment: fixed;
+    background-size:100% 100%;
+}
+.main-body{
+    margin: 0 auto;
+    z-index: -99;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.main-body .selections{
+    margin-top: 45%;
+}
+.selections label{
+    font-size: 5em;
+    color: #ffe237
+}
+.query-body{
+    margin-top: 20%;
+}
+.order-body{
+    margin-top: 10%;
+}
+.admin-body{
+    margin-top: 10%;
+}
+
+

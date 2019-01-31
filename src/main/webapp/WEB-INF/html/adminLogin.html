@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>welcome</title>
+    <meta name="viewport" content="height=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../../resources/css/welcome.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <script src="../../resources/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="resources/css/style.css">
+
+    <style type="text/css">
+        body {
+            background: #eee;
+            background-image: url(../../resources/images/admin_bg.png);
+            background-position: initial;
+            background-repeat: initial;
+            background-position: initial;
+            background-repeat: initial;
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(function() {
+
+            $("#btn-login").click(function () {
+                var username = $(".login-name").val();
+                var password = $(".login-word").val();
+                if(username == "" || password == ""){
+                    alert("用户名或密码不能为空");
+                }else{
+                    location.href='adminquery.html';
+                }
+            })
+        })
+    </script>
+
+</head>
+<body>
+<form>
+    <div class="active-img">
+        <img src="../../resources/images/2.png"/>
+        <div class="active-title">
+            <label class="la1">羽毛球预约后台管理系统</label><br>
+        </div>
+        <br>
+        <div class="user-login">
+            UserName：<input type="text" name="用户名" class="login-name"  style="width: 40%" />
+        </div>
+        <div class="user-word">
+            PassWord：<input type="password" name="密码" class="login-word" style="width: 40%" />
+        </div>
+        <div class="switch" >
+            记住密码: &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" />
+        </div>
+        <div class="order-btn">
+            <input type="button" id="btn-login" class="btn btn-success" style="width: 80%" value="登陆">
+        </div>
+        <div class="optionr-btn">
+            <a href="#">忘记密码</a>
+        </div>
+    </div>
+</form>
+</body>
+</html>

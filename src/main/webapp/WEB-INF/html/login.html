@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <meta name="viewport" content="height=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../../resources/css/welcome.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <script src="../../resources/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <script type="text/javascript">
+        $(function() {
+            $("#btn-order").click(function () {
+                alert("注册成功");
+            })
+        })
+    </script>
+
+</head>
+<body>
+<form>
+    <div class="bar-top">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="activeorder.html">预约</a></li>
+            <li><a href="activityOptions.html">我的预约</a></li>
+            <li><a href="welcome.html">登陆</a></li>
+            <li><a href="adminLogin.html">管理员</a></li>
+        </ul>
+    </div>
+    <div class="active-img">
+        <img src="../../resources/images/2.png"/>
+        <div class="active-title">
+            <label class="la1">欢迎使用羽毛球预约系统</label><br>
+        </div>
+        <br>
+
+        <div class="user-login">
+            昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：<input type="text" name="用户名" class="login-name" style="width: 40%"/>
+        </div>
+        <div class="user-word">
+            密 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" name="密码" class="login-word" style="width: 40%" />
+        </div>
+        <div class="user-word">
+            确认密码：<input type="password" name="密码" class="check-word"  style="width: 40%"/>
+        </div>
+        <div class="switch" >
+            <input type="checkbox" name="checks" value="1" checked="checked"/>&nbsp;&nbsp;记住密码
+        </div>
+        <div class="order-btn">
+            <input type="button" id="btn-order" class="btn btn-success" style="width: 80%" value="注册">
+        </div>
+        <div class="optionr-btn">
+            <a href="welcome.html">已有账户</a>
+        </div>
+    </div>
+</form>
+</body>
+</html>
